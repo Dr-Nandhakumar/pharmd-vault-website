@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dr-nandhakumar.github.io/pharmd-vault-website/sitemap.xml
