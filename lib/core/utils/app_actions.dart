@@ -54,12 +54,17 @@ class AppActions {
     await openUrl(context, AppUrls.whatsappUrl);
   }
 
-  /// Opens a file bundled with the deployed website, without relying on Drive.
+  /// Opens a file bundled with the deployed Flutter website.
   static Future<void> openWebsiteAsset(
     BuildContext context,
     String assetPath,
   ) async {
-    await openUrl(context, Uri.base.resolve(assetPath).toString());
+    // Flutter copies an asset declared as "assets/..." to web output at
+    // "assets/assets/...".
+    final webAssetPath = assetPath.startsWith('assets/')
+        ? 'assets/$assetPath'
+        : assetPath;
+    await openUrl(context, Uri.base.resolve(webAssetPath).toString());
   }
 
   static void _showMessage(BuildContext context, String message) {
