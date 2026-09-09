@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../constants/app_urls.dart';
+
+/// Centralises links and keeps failures understandable to visitors.
+class AppActions {
+  AppActions._();
+
+  static Future<void> openUrl(BuildContext context, String url) async {
+    if (url.trim().isEmpty) {
+      _showMessage(context, 'This link will be available soon.');
+      return;
+    }
+
+    final uri = Uri.tryParse(url);
+    if (uri == null ||
+        !await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      if (context.mounted) {
+        _showMessage(
+          context,
+          'Unable to open this link. Please try again later.',
+        );
+      }
+    }
+  }
+
+  static Future<void> composeEmail(
+    BuildContext context, {
+    required String subject,
+    String body = '',
+  }) async {
+    final uri = Uri(
+      scheme: 'mailto',
+      path: AppUrls.email,
+      queryParameters: <String, String>{
+        'subject': subject,
+        if (body.isNotEmpty) 'body': body,
+      },
+    );
+
+    if (!await launchUrl(uri)) {
+      if (context.mounted) {
+        _showMessage(context, 'Please email us at ${AppUrls.email}.');
+      }
+    }
+  }
+
+  static Future<void> callPhone(BuildContext context) async {
+    await openUrl(context, 'tel:+919361542119');
+  }
+
+  static Future<void> openWhatsApp(BuildContext context) async {
+    await openUrl(context, AppUrls.whatsappUrl);
+  }
+
+  /// Opens a file bundled with the deployed website, without relying on Drive.
+  static Future<void> openWebsiteAsset(
+    BuildContext context,
+    String assetPath,
+  ) async {
+    await openUrl(context, Uri.base.resolve(assetPath).toString());
+  }
+
+  static void _showMessage(BuildContext context, String message) {
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
+  }
+}
