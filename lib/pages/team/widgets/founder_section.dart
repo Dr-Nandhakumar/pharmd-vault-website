@@ -47,21 +47,15 @@ class FounderSection extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: const Color(0xffF5F7FA),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            CircleAvatar(radius: 70, child: Icon(Icons.person, size: 70)),
-            SizedBox(height: 24),
-            Text(
-              "Founder Photo",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            ),
-            SizedBox(height: 8),
-            Text(
-              "Replace with official photograph",
-              style: TextStyle(color: Colors.grey),
-            ),
-          ],
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(24),
+          child: Image.asset(
+            'assets/logo/founder-nandhakumar.png',
+            width: double.infinity,
+            height: 420,
+            fit: BoxFit.contain,
+            semanticLabel: 'Dr. K. Nandhakumar, Founder and President',
+          ),
         ),
       ),
     );
