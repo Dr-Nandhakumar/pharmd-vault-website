@@ -39,7 +39,7 @@ class ExecutiveBoard extends StatelessWidget {
             runSpacing: 28,
             alignment: WrapAlignment.center,
             children: const [
-              _BoardCard(designation: "President", name: "Dr. K. Nandhakumar"),
+              _BoardCard(designation: "President", name: "Dr. K. Nandhakumar", imagePath: "assets/logo/founder-nandhakumar.png"),
 
               _BoardCard(designation: "Secretary", name: "Dr. Hariharan V"),
 
@@ -58,8 +58,9 @@ class _BoardCard extends StatelessWidget {
   final String designation;
   final String name;
   final String qualification;
+  final String imagePath;
 
-  const _BoardCard({required this.designation, required this.name, this.qualification = ''});
+  const _BoardCard({required this.designation, required this.name, this.qualification = '', this.imagePath = ''});
 
   @override
   Widget build(BuildContext context) {
@@ -75,11 +76,12 @@ class _BoardCard extends StatelessWidget {
               CircleAvatar(
                 radius: 48,
                 backgroundColor: AppColors.primary.withValues(alpha: 0.10),
-                child: const Icon(
+                foregroundImage: imagePath.isEmpty ? null : AssetImage(imagePath),
+                child: imagePath.isEmpty ? const Icon(
                   Icons.person,
                   size: 46,
                   color: AppColors.primary,
-                ),
+                ) : null,
               ),
 
               const SizedBox(height: 20),
