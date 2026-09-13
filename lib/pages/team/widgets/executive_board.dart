@@ -43,13 +43,9 @@ class ExecutiveBoard extends StatelessWidget {
 
               _BoardCard(designation: "Secretary", name: "Dr. Hariharan V"),
 
-              _BoardCard(designation: "Vice President", name: "Vacant"),
+              _BoardCard(designation: "Vice President", name: "Dr. Ranjithkumar.V", qualification: "Pharm.D, Rph"),
 
-              _BoardCard(designation: "Treasurer", name: "Vacant"),
-
-              _BoardCard(designation: "Joint Secretary", name: "Vacant"),
-
-              _BoardCard(designation: "Research Coordinator", name: "Vacant"),
+              _BoardCard(designation: "Research Coordinator", name: "Mr. Parthipan.M", qualification: "M.Pharm"),
             ],
           ),
         ],
@@ -61,8 +57,9 @@ class ExecutiveBoard extends StatelessWidget {
 class _BoardCard extends StatelessWidget {
   final String designation;
   final String name;
+  final String qualification;
 
-  const _BoardCard({required this.designation, required this.name});
+  const _BoardCard({required this.designation, required this.name, this.qualification = ''});
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +102,11 @@ class _BoardCard extends StatelessWidget {
                   context,
                 ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
               ),
+
+              if (qualification.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Text(qualification, textAlign: TextAlign.center),
+              ],
 
               const SizedBox(height: 14),
 
