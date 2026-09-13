@@ -44,15 +44,7 @@ class EditorialBoard extends StatelessWidget {
                 name: "Dr. Abishanth S.G",
               ),
 
-              _EditorCard(designation: "Managing Editor", name: "Vacant"),
-
-              _EditorCard(designation: "Associate Editor", name: "Vacant"),
-
-              _EditorCard(designation: "Section Editor", name: "Vacant"),
-
-              _EditorCard(designation: "Technical Editor", name: "Vacant"),
-
-              _EditorCard(designation: "Language Editor", name: "Vacant"),
+              _EditorCard(designation: "Managing Editor", name: "Ms. Sandhiya", qualification: "B.Pharm, Rph"),
             ],
           ),
         ],
@@ -64,8 +56,9 @@ class EditorialBoard extends StatelessWidget {
 class _EditorCard extends StatelessWidget {
   final String designation;
   final String name;
+  final String qualification;
 
-  const _EditorCard({required this.designation, required this.name});
+  const _EditorCard({required this.designation, required this.name, this.qualification = ''});
 
   @override
   Widget build(BuildContext context) {
@@ -108,6 +101,11 @@ class _EditorCard extends StatelessWidget {
                   context,
                 ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
               ),
+
+              if (qualification.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Text(qualification, textAlign: TextAlign.center),
+              ],
 
               const SizedBox(height: 14),
 
