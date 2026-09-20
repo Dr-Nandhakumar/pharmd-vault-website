@@ -2,8 +2,64 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../../core/constants/app_colors.dart';
 
-class LatestNews extends StatelessWidget {
+class LatestNews extends StatefulWidget {
   const LatestNews({super.key});
+
+  @override
+  State<LatestNews> createState() => _LatestNewsState();
+}
+
+class _LatestNewsState extends State<LatestNews> {
+  bool _sharedArticleOpened = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_sharedArticleOpened) return;
+    _sharedArticleOpened = true;
+    final fragment = Uri.base.fragment;
+    final queryIndex = fragment.indexOf('?');
+    if (queryIndex < 0) return;
+    final slug = Uri.splitQueryString(
+      fragment.substring(queryIndex + 1),
+    )['article'];
+    if (slug == null) return;
+    final matching = LatestNews._news.where((item) => item.slug == slug);
+    if (matching.isEmpty) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _showSharedArticle(context, matching.first);
+    });
+  }
+
+  void _showSharedArticle(BuildContext context, _NewsItem news) {
+    showDialog<void>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text(news.title),
+        content: SingleChildScrollView(
+          child: Text(news.description, style: const TextStyle(height: 1.6)),
+        ),
+        actions: [
+          TextButton.icon(
+            onPressed: () async {
+              await Clipboard.setData(ClipboardData(text: news.link));
+              if (dialogContext.mounted) {
+                ScaffoldMessenger.of(dialogContext).showSnackBar(
+                  const SnackBar(content: Text('News link copied.')),
+                );
+              }
+            },
+            icon: const Icon(Icons.link),
+            label: const Text('Copy shareable link'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(dialogContext),
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
+  }
 
   static const _news = [
     _NewsItem(
@@ -217,7 +273,7 @@ class _NewsCard extends StatelessWidget {
                         label: const Text('Read'),
                       ),
                       IconButton(
-                        tooltip: 'Copy news link',
+                        tooltip: 'Copy shareable news link',
                         onPressed: () => _copyLink(context),
                         icon: const Icon(Icons.link),
                       ),
