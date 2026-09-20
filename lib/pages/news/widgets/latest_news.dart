@@ -24,7 +24,7 @@ class _LatestNewsState extends State<LatestNews> {
       fragment.substring(queryIndex + 1),
     )['article'];
     if (slug == null) return;
-    final matching = LatestNews._news.where((item) => item.slug == slug);
+    final matching = _news.where((item) => item.slug == slug);
     if (matching.isEmpty) return;
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) _showSharedArticle(context, matching.first);
