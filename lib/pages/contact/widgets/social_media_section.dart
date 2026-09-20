@@ -15,26 +15,22 @@ class SocialMediaSection extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "Connect With Us",
+            'Connect With Us',
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
             ),
           ),
-
           const SizedBox(height: 18),
-
           SizedBox(
             width: 850,
             child: Text(
-              "Follow Pharm.D Vault Organization on our social media platforms to receive the latest news, publications, educational resources, webinars, and research updates.",
+              'Follow Pharm.D Vault Organization for publications, educational resources, courses, webinars, and research updates.',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
-
           const SizedBox(height: 50),
-
           Wrap(
             spacing: 24,
             runSpacing: 24,
@@ -42,40 +38,33 @@ class SocialMediaSection extends StatelessWidget {
             children: const [
               _SocialCard(
                 icon: Icons.language,
-                title: "Website",
-                subtitle: "www.pharmdvault.org",
+                title: 'Website',
+                subtitle: 'pharmdvault.org',
                 url: AppUrls.website,
               ),
-
-              _SocialCard(
-                icon: Icons.facebook,
-                title: "Facebook",
-                subtitle: "Coming Soon",
-              ),
-
               _SocialCard(
                 icon: Icons.camera_alt_outlined,
-                title: "Instagram",
-                subtitle: "Coming Soon",
+                title: 'Instagram',
+                subtitle: '@pharmdvault',
+                url: AppUrls.instagram,
               ),
-
               _SocialCard(
-                icon: Icons.play_circle_outline,
-                title: "YouTube",
-                subtitle: "@dr.k.nandhakumar",
-                url: AppUrls.youtube,
+                icon: Icons.forum_outlined,
+                title: 'Threads',
+                subtitle: '@pharmdvault',
+                url: AppUrls.threads,
               ),
-
-              _SocialCard(
-                icon: Icons.business_center_outlined,
-                title: "LinkedIn",
-                subtitle: "Coming Soon",
-              ),
-
               _SocialCard(
                 icon: Icons.alternate_email,
-                title: "X (Twitter)",
-                subtitle: "Coming Soon",
+                title: 'X',
+                subtitle: '@pharmdvault',
+                url: AppUrls.x,
+              ),
+              _SocialCard(
+                icon: Icons.play_circle_outline,
+                title: 'YouTube',
+                subtitle: '@dr.k.nandhakumar',
+                url: AppUrls.youtube,
               ),
             ],
           ),
@@ -95,7 +84,7 @@ class _SocialCard extends StatelessWidget {
     required this.icon,
     required this.title,
     required this.subtitle,
-    this.url = '',
+    required this.url,
   });
 
   @override
@@ -104,7 +93,7 @@ class _SocialCard extends StatelessWidget {
       width: 250,
       child: InkWell(
         borderRadius: BorderRadius.circular(18),
-        onTap: url.isEmpty ? null : () => AppActions.openUrl(context, url),
+        onTap: () => AppActions.openUrl(context, url),
         child: Card(
           elevation: 3,
           shape: RoundedRectangleBorder(
@@ -119,9 +108,7 @@ class _SocialCard extends StatelessWidget {
                   backgroundColor: AppColors.primary.withValues(alpha: 0.10),
                   child: Icon(icon, size: 30, color: AppColors.primary),
                 ),
-
                 const SizedBox(height: 18),
-
                 Text(
                   title,
                   textAlign: TextAlign.center,
@@ -129,9 +116,7 @@ class _SocialCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-
                 const SizedBox(height: 10),
-
                 Text(
                   subtitle,
                   textAlign: TextAlign.center,
