@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../../../core/constants/app_colors.dart';
 
 class LatestNews extends StatelessWidget {
@@ -108,17 +107,6 @@ class _NewsCard extends StatelessWidget {
   final _NewsItem news;
   const _NewsCard({required this.news});
 
-  Future<void> _shareToWhatsApp(BuildContext context) async {
-    final uri = Uri.parse(
-      'https://wa.me/?text=\${Uri.encodeComponent(news.shareText)}',
-    );
-    if (!await launchUrl(uri, webOnlyWindowName: '_blank') && context.mounted) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('Unable to open WhatsApp.')));
-    }
-  }
-
   Future<void> _copyLink(BuildContext context) async {
     await Clipboard.setData(ClipboardData(text: news.link));
     if (context.mounted) {
@@ -141,11 +129,6 @@ class _NewsCard extends StatelessWidget {
             onPressed: () => _copyLink(dialogContext),
             icon: const Icon(Icons.link),
             label: const Text('Copy link'),
-          ),
-          TextButton.icon(
-            onPressed: () => _shareToWhatsApp(dialogContext),
-            icon: const Icon(Icons.share),
-            label: const Text('WhatsApp'),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(dialogContext),
@@ -232,11 +215,6 @@ class _NewsCard extends StatelessWidget {
                         onPressed: () => _showArticle(context),
                         icon: const Icon(Icons.menu_book_outlined),
                         label: const Text('Read'),
-                      ),
-                      IconButton(
-                        tooltip: 'Share on WhatsApp',
-                        onPressed: () => _shareToWhatsApp(context),
-                        icon: const Icon(Icons.share, color: Color(0xff25D366)),
                       ),
                       IconButton(
                         tooltip: 'Copy news link',
