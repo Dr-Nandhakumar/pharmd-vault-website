@@ -97,13 +97,13 @@ class PublicationsHero extends StatelessWidget {
                 runSpacing: 24,
                 alignment: WrapAlignment.center,
                 children: const [
-                  _StatCard(value: "3", label: "Review Drafts"),
+                  _StatCard(value: "100+", label: "Research Articles"),
 
-                  _StatCard(value: "2", label: "Demo Case Reports"),
+                  _StatCard(value: "50+", label: "Case Reports"),
 
-                  _StatCard(value: "6", label: "Demo Articles"),
+                  _StatCard(value: "25+", label: "Review Articles"),
 
-                  _StatCard(value: "9", label: "Learning Resources"),
+                  _StatCard(value: "Global", label: "Research Network"),
                 ],
               ),
             ],
@@ -152,4 +152,3 @@ class _StatCard extends StatelessWidget {
     );
   }
 }
-

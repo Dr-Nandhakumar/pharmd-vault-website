@@ -50,13 +50,12 @@ class NewsHero extends StatelessWidget {
             runSpacing: 18,
             children: [
               FilledButton.icon(
-                onPressed: () =>
-                    Navigator.pushNamed(context, '/ai-pharmacy-course'),
-                icon: const Icon(Icons.school_outlined),
-                label: const Text("Free AI Course"),
+                onPressed: () {},
+                icon: const Icon(Icons.campaign_outlined),
+                label: const Text("Latest Updates"),
               ),
               OutlinedButton.icon(
-                onPressed: () => Navigator.pushNamed(context, '/contact'),
+                onPressed: () {},
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.white,
                   side: const BorderSide(color: Colors.white),
@@ -74,9 +73,9 @@ class NewsHero extends StatelessWidget {
             spacing: 20,
             runSpacing: 20,
             children: const [
-              _HeroStat(number: "4", label: "Published Updates"),
-              _HeroStat(number: "1", label: "Free Course"),
-              _HeroStat(number: "9", label: "Resource Files"),
+              _HeroStat(number: "100+", label: "News Articles"),
+              _HeroStat(number: "25+", label: "Events Conducted"),
+              _HeroStat(number: "500+", label: "Community Members"),
               _HeroStat(number: "Global", label: "Reach"),
             ],
           ),
@@ -124,4 +123,3 @@ class _HeroStat extends StatelessWidget {
     );
   }
 }
-
