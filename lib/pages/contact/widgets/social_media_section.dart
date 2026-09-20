@@ -27,7 +27,7 @@ class SocialMediaSection extends StatelessWidget {
           SizedBox(
             width: 850,
             child: Text(
-              "Follow Pharm.D Vault Organization on our official social media platforms to receive the latest news, publications, educational resources, webinars, and research updates.",
+              "Follow Pharm.D Vault Organization on our social media platforms to receive the latest news, publications, educational resources, webinars, and research updates.",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium,
             ),
@@ -42,7 +42,7 @@ class SocialMediaSection extends StatelessWidget {
             children: const [
               _SocialCard(
                 icon: Icons.language,
-                title: "Official Website",
+                title: "Website",
                 subtitle: "www.pharmdvault.org",
                 url: AppUrls.website,
               ),

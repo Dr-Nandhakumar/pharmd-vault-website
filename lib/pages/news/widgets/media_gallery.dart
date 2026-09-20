@@ -65,7 +65,7 @@ class MediaGallery extends StatelessWidget {
 
               _GalleryCard(
                 title: "Publication Launch",
-                subtitle: "Official Release",
+                subtitle: "Release",
                 icon: Icons.menu_book,
               ),
 

@@ -82,7 +82,7 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
               ),
 
               Text(
-                'Official Organization',
+                'Organization',
                 style: Theme.of(context).textTheme.bodySmall,
               ),
             ],
@@ -189,7 +189,7 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    "Official Organization",
+                    "Organization",
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ],

@@ -96,7 +96,7 @@ class IndexingSection extends StatelessWidget {
                   const SizedBox(height: 18),
 
                   Text(
-                    "As the organization grows, Pharm.D Vault aims to fulfill the quality standards necessary for inclusion in internationally recognized indexing services. Indexing will only be claimed after official acceptance by the respective organizations.",
+                    "As the organization grows, Pharm.D Vault aims to fulfill the quality standards necessary for inclusion in internationally recognized indexing services. Indexing will only be claimed after acceptance by the respective organizations.",
                     textAlign: TextAlign.center,
                     style: Theme.of(
                       context,

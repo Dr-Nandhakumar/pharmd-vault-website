@@ -88,7 +88,7 @@ class ContactHero extends StatelessWidget {
             children: const [
               _HeroCard(
                 icon: Icons.mail_outline,
-                title: "Official Email",
+                title: "Email",
                 value: "pharmdvault2025@gmail.com",
               ),
               _HeroCard(

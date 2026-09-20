@@ -7,7 +7,7 @@ class GalleryData {
     GalleryImage(
       id: 'IMG001',
       title: 'Organization Logo',
-      description: 'Official Pharm.D Vault Organization Logo',
+      description: 'Pharm.D Vault Organization Logo',
       imageUrl: '',
       category: 'Branding',
       uploadedDate: DateTime(2026, 1, 1),

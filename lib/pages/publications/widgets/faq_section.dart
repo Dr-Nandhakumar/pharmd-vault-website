@@ -68,7 +68,7 @@ class FAQSection extends StatelessWidget {
                 _FAQTile(
                   question: "How can I contact the Editorial Office?",
                   answer:
-                      "You can contact us through the Contact page or the official email address provided on the website.",
+                      "You can contact us through the Contact page or the email address provided on the website.",
                 ),
               ],
             ),

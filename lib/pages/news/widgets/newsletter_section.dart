@@ -94,7 +94,7 @@ class NewsletterSection extends StatelessWidget {
                         const SizedBox(height: 18),
 
                         Text(
-                          "This issue covers the official launch of Pharm.D Vault Organization, publication initiatives, research opportunities, AI in pharmacy education, clinical pharmacy updates, and upcoming academic activities.",
+                          "This issue covers the launch of Pharm.D Vault Organization, publication initiatives, research opportunities, AI in pharmacy education, clinical pharmacy updates, and upcoming academic activities.",
                           style: Theme.of(
                             context,
                           ).textTheme.bodyLarge?.copyWith(height: 1.7),

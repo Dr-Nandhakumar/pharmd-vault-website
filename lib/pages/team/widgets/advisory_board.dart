@@ -127,7 +127,7 @@ class _AdvisorCard extends StatelessWidget {
               const SizedBox(height: 16),
 
               Text(
-                "Official Advisory Board Member",
+                "Advisory Board Member",
                 textAlign: TextAlign.center,
                 style: Theme.of(
                   context,

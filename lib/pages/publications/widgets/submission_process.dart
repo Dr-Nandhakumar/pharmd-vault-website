@@ -41,7 +41,7 @@ class SubmissionProcess extends StatelessWidget {
                 icon: Icons.upload_file,
                 title: "Submit Manuscript",
                 description:
-                    "Authors submit their manuscript through the official Pharm.D Vault submission portal.",
+                    "Authors submit their manuscript through the Pharm.D Vault submission portal.",
               ),
 
               _StepCard(

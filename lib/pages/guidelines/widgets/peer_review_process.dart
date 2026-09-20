@@ -45,7 +45,7 @@ class PeerReviewProcess extends StatelessWidget {
                 number: "01",
                 title: "Submission",
                 description:
-                    "Authors submit their manuscript along with all required documents through the official submission system.",
+                    "Authors submit their manuscript along with all required documents through the submission system.",
               ),
 
               _StepCard(

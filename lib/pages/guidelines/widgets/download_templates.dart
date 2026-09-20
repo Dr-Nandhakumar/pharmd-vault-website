@@ -37,7 +37,7 @@ class DownloadTemplates extends StatelessWidget {
           SizedBox(
             width: 850,
             child: Text(
-              "Use the official Pharm.D Vault Organization templates before submitting your manuscript. These templates ensure uniform formatting and faster editorial review.",
+              "Use the Pharm.D Vault Organization templates before submitting your manuscript. These templates ensure uniform formatting and faster editorial review.",
               textAlign: TextAlign.center,
               style: Theme.of(
                 context,
@@ -85,7 +85,7 @@ class DownloadTemplates extends StatelessWidget {
                   const SizedBox(height: 16),
 
                   Text(
-                    "Download all official templates, author forms, declarations, and submission documents together in one package.",
+                    "Download all templates, author forms, declarations, and submission documents together in one package.",
                     textAlign: TextAlign.center,
                     style: Theme.of(
                       context,

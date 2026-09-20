@@ -48,7 +48,7 @@ class ContactInformation extends StatelessWidget {
 
               _ContactCard(
                 icon: Icons.email_outlined,
-                title: "Official Email",
+                title: "Email",
                 value: AppUrls.email,
               ),
 
@@ -66,7 +66,7 @@ class ContactInformation extends StatelessWidget {
 
               _ContactCard(
                 icon: Icons.language_outlined,
-                title: "Official Website",
+                title: "Website",
                 value: "www.pharmdvault.org",
               ),
 

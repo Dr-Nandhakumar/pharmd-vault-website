@@ -83,7 +83,7 @@ class _LatestNewsState extends State<LatestNews> {
       category: 'Publication',
       date: '18 July 2026',
       description:
-          'Authors can submit manuscripts through the official Pharm.D Vault publication system.',
+          'Authors can submit manuscripts through the Pharm.D Vault publication system.',
       icon: Icons.article_outlined,
     ),
     _NewsItem(
@@ -116,7 +116,7 @@ class _LatestNewsState extends State<LatestNews> {
           SizedBox(
             width: 850,
             child: Text(
-              'Official updates, education news, free learning opportunities, publications, events, and organizational announcements.',
+              'updates, education news, free learning opportunities, publications, events, and organizational announcements.',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium,
             ),

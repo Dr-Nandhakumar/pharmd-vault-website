@@ -74,7 +74,7 @@ class PublicationGuidelinesCard extends StatelessWidget {
                 icon: Icons.format_align_left_outlined,
                 title: "Formatting",
                 description:
-                    "Authors should follow the official Pharm.D Vault manuscript format.",
+                    "Authors should follow the Pharm.D Vault manuscript format.",
               ),
             ],
           ),

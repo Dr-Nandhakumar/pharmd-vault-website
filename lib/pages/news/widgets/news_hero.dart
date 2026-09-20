@@ -33,7 +33,7 @@ class NewsHero extends StatelessWidget {
           SizedBox(
             width: 900,
             child: Text(
-              "Stay updated with the latest news, research activities, official announcements, educational programs, conferences, workshops, publications, and organizational achievements of Pharm.D Vault Organization.",
+              "Stay updated with the latest news, research activities, announcements, educational programs, conferences, workshops, publications, and organizational achievements of Pharm.D Vault Organization.",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 color: Colors.white70,

@@ -14,7 +14,7 @@ class Announcements extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "Official Announcements",
+            "Announcements",
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
@@ -26,7 +26,7 @@ class Announcements extends StatelessWidget {
           SizedBox(
             width: 850,
             child: Text(
-              "Stay informed about official notices, recruitment opportunities, editorial board openings, memberships, research collaborations, and important organizational updates.",
+              "Stay informed about notices, recruitment opportunities, editorial board openings, memberships, research collaborations, and important organizational updates.",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium,
             ),

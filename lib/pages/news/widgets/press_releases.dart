@@ -25,7 +25,7 @@ class PressReleases extends StatelessWidget {
           SizedBox(
             width: 850,
             child: Text(
-              "Official statements, media announcements, institutional collaborations, and important organizational communications released by Pharm.D Vault Organization.",
+              "statements, media announcements, institutional collaborations, and important organizational communications released by Pharm.D Vault Organization.",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium,
             ),
@@ -41,7 +41,7 @@ class PressReleases extends StatelessWidget {
             child: Column(
               children: const [
                 _PressTile(
-                  title: "Official Launch of Pharm.D Vault Organization",
+                  title: "Launch of Pharm.D Vault Organization",
                   date: "20 July 2026",
                 ),
 

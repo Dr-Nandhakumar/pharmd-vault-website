@@ -119,7 +119,7 @@ class _ReviewerCard extends StatelessWidget {
               const SizedBox(height: 16),
 
               Text(
-                "Official Peer Reviewer",
+                "Peer Reviewer",
                 textAlign: TextAlign.center,
                 style: Theme.of(
                   context,

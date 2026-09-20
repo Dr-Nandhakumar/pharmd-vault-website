@@ -35,7 +35,7 @@ class NewsSubscription extends StatelessWidget {
               const SizedBox(height: 18),
 
               Text(
-                "Subscribe to receive official announcements, newsletters, research opportunities, conferences, workshops, educational resources, and publication updates directly from Pharm.D Vault Organization.",
+                "Subscribe to receive announcements, newsletters, research opportunities, conferences, workshops, educational resources, and publication updates directly from Pharm.D Vault Organization.",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   color: Colors.white70,

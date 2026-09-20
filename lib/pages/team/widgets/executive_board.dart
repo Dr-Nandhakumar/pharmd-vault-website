@@ -113,7 +113,7 @@ class _BoardCard extends StatelessWidget {
               const SizedBox(height: 14),
 
               Text(
-                "Official Executive Board Member",
+                "Executive Board Member",
                 textAlign: TextAlign.center,
                 style: Theme.of(
                   context,
