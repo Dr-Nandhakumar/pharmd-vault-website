@@ -17,7 +17,9 @@ class _LatestNewsState extends State<LatestNews> {
     super.didChangeDependencies();
     if (_sharedArticleOpened) return;
     _sharedArticleOpened = true;
-    final slug = Uri.base.queryParameters['article'];
+    final currentUrl = Uri.base.toString();
+    final match = RegExp(r'[?&]article=([^&#]+)').firstMatch(currentUrl);
+    final slug = match == null ? null : Uri.decodeComponent(match.group(1)!);
     if (slug == null) return;
     final matching = _news.where((item) => item.slug == slug);
     if (matching.isEmpty) return;
