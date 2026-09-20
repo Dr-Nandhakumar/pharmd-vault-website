@@ -24,7 +24,7 @@ class _NewsSubscriptionState extends State<NewsSubscription> {
       context,
       subject: 'Newsletter Subscription Request',
       body:
-          'Please add \${_email.text.trim()} to the Pharm.D Vault Organization newsletter.',
+          'Please add ${_email.text.trim()} to the Pharm.D Vault Organization newsletter.',
     );
   }
 
@@ -111,4 +111,3 @@ class _NewsSubscriptionState extends State<NewsSubscription> {
     );
   }
 }
-

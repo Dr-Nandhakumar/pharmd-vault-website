@@ -34,13 +34,14 @@ class _AiPharmacyCoursePageState extends State<AiPharmacyCoursePage> {
 
   Future<void> _register() async {
     if (!(_formKey.currentState?.validate() ?? false)) return;
-    final body = '''AI Application in Pharmacy — Course Registration
+    final body =
+        '''AI Application in Pharmacy — Course Registration
 
-Name: \${_name.text.trim()}
-Email: \${_email.text.trim()}
-Phone: \${_phone.text.trim()}
-Profession / Course: \${_profession.text.trim()}
-Institution / Workplace: \${_institution.text.trim()}
+Name: ${_name.text.trim()}
+Email: ${_email.text.trim()}
+Phone: ${_phone.text.trim()}
+Profession / Course: ${_profession.text.trim()}
+Institution / Workplace: ${_institution.text.trim()}
 
 I would like to register for the free AI Application in Pharmacy course. I understand that schedules and completion requirements will be communicated by Pharm.D Vault Organization.''';
     await AppActions.composeEmail(
@@ -292,4 +293,3 @@ class _InfoCard extends StatelessWidget {
     );
   }
 }
-

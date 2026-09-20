@@ -30,14 +30,14 @@ class AppActions {
     required String subject,
     String body = '',
   }) async {
-    final uri = Uri(
-      scheme: 'mailto',
-      path: AppUrls.email,
-      queryParameters: <String, String>{
-        'subject': subject,
-        if (body.isNotEmpty) 'body': body,
-      },
-    );
+    // Build the mailto query explicitly. Uri(queryParameters: ...) uses `+`
+    // for spaces, which some mobile email clients display literally instead
+    // of decoding as a space.
+    final query = <String>[
+      'subject=${Uri.encodeComponent(subject)}',
+      if (body.isNotEmpty) 'body=${Uri.encodeComponent(body)}',
+    ].join('&');
+    final uri = Uri.parse('mailto:${AppUrls.email}?$query');
 
     if (!await launchUrl(uri)) {
       if (context.mounted) {
