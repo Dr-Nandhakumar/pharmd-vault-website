@@ -17,12 +17,7 @@ class _LatestNewsState extends State<LatestNews> {
     super.didChangeDependencies();
     if (_sharedArticleOpened) return;
     _sharedArticleOpened = true;
-    final fragment = Uri.base.fragment;
-    final queryIndex = fragment.indexOf('?');
-    if (queryIndex < 0) return;
-    final slug = Uri.splitQueryString(
-      fragment.substring(queryIndex + 1),
-    )['article'];
+    final slug = Uri.base.queryParameters['article'];
     if (slug == null) return;
     final matching = _news.where((item) => item.slug == slug);
     if (matching.isEmpty) return;
@@ -154,7 +149,7 @@ class _NewsItem {
     required this.icon,
   });
 
-  String get link => 'https://pharmdvault.org/#/news?article=$slug';
+  String get link => 'https://pharmdvault.org/?article=$slug#/news';
   String get shareText =>
       '$title\\n\\n$description\\n\\nRead on Pharm.D Vault: $link';
 }
