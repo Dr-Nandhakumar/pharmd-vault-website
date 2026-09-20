@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../pages/about/about_page.dart';
+import '../pages/courses/ai_pharmacy_course_page.dart';
 import '../pages/contact/contact_page.dart';
 import '../pages/gallery/gallery_page.dart';
 import '../pages/guidelines/guidelines_page.dart';
@@ -20,6 +21,8 @@ class AppRoutes {
   static const String home = '/';
 
   static const String about = '/about';
+
+  static const String aiPharmacyCourse = '/ai-pharmacy-course';
 
   static const String publications = '/publications';
 
@@ -44,6 +47,8 @@ class AppRoutes {
 
     about: (context) => const AboutPage(),
 
+    aiPharmacyCourse: (context) => const AiPharmacyCoursePage(),
+
     publications: (context) => const PublicationsPage(),
 
     guidelines: (context) => const GuidelinesPage(),
@@ -59,3 +64,4 @@ class AppRoutes {
     privacy: (context) => const PrivacyPage(),
   };
 }
+

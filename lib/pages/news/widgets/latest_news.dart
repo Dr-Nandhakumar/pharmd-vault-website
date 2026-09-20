@@ -49,6 +49,15 @@ class _LatestNewsState extends State<LatestNews> {
             icon: const Icon(Icons.link),
             label: const Text('Copy shareable link'),
           ),
+          if (news.slug == 'free-ai-application-in-pharmacy-course')
+            FilledButton.icon(
+              onPressed: () {
+                Navigator.pop(dialogContext);
+                Navigator.pushNamed(context, '/ai-pharmacy-course');
+              },
+              icon: const Icon(Icons.how_to_reg),
+              label: const Text('Course details & registration'),
+            ),
           FilledButton(
             onPressed: () => Navigator.pop(dialogContext),
             child: const Text('Close'),
@@ -265,9 +274,20 @@ class _NewsCard extends StatelessWidget {
                     runSpacing: 6,
                     children: [
                       TextButton.icon(
-                        onPressed: () => _showArticle(context),
+                        onPressed:
+                            news.slug ==
+                                'free-ai-application-in-pharmacy-course'
+                            ? () => Navigator.pushNamed(
+                                context,
+                                '/ai-pharmacy-course',
+                              )
+                            : () => _showArticle(context),
                         icon: const Icon(Icons.menu_book_outlined),
-                        label: const Text('Read'),
+                        label: Text(
+                          news.slug == 'free-ai-application-in-pharmacy-course'
+                              ? 'Register'
+                              : 'Read',
+                        ),
                       ),
                       IconButton(
                         tooltip: 'Copy shareable news link',

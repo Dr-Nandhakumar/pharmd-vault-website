@@ -80,7 +80,7 @@ class FeaturedNews extends StatelessWidget {
                       const SizedBox(height: 22),
 
                       Text(
-                        "Pharm.D Vault Organization Officially Begins Its Mission to Transform Pharmacy Education",
+                        "Pharm.D Vault Organization Begins Its Mission to Advance Pharmacy Education",
                         style: Theme.of(context).textTheme.headlineSmall
                             ?.copyWith(fontWeight: FontWeight.bold),
                       ),
@@ -115,9 +115,10 @@ class FeaturedNews extends StatelessWidget {
                       const SizedBox(height: 28),
 
                       FilledButton.icon(
-                        onPressed: () {},
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/ai-pharmacy-course'),
                         icon: Icon(Icons.arrow_forward),
-                        label: Text("Read Full Story"),
+                        label: Text("Explore Free AI Course"),
                       ),
                     ],
                   ),
@@ -149,3 +150,4 @@ class _NewsInfo extends StatelessWidget {
     );
   }
 }
+
