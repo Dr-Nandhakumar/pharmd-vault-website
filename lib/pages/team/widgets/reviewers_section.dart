@@ -41,9 +41,17 @@ class ReviewersSection extends StatelessWidget {
               _ReviewerCard(specialization: "Clinical Pharmacy"),
               _ReviewerCard(specialization: "Pharmacology"),
               _ReviewerCard(specialization: "Pharmaceutics"),
-              _ReviewerCard(specialization: "Pharmaceutical Chemistry"),
+              _ReviewerCard(
+                specialization: "Pharmaceutical Chemistry",
+                name: "Mr. Dharmasastha.S",
+                qualification: "M.Pharm, RPh",
+              ),
               _ReviewerCard(specialization: "Hospital Pharmacy"),
-              _ReviewerCard(specialization: "Pharmacovigilance", name: "Dr. Hudson Philip", qualification: "Pharm.D (PB), Rph"),
+              _ReviewerCard(
+                specialization: "Pharmacovigilance",
+                name: "Dr. Hudson Philip",
+                qualification: "Pharm.D (PB), Rph",
+              ),
             ],
           ),
         ],
@@ -57,7 +65,11 @@ class _ReviewerCard extends StatelessWidget {
   final String name;
   final String qualification;
 
-  const _ReviewerCard({required this.specialization, this.name = '', this.qualification = ''});
+  const _ReviewerCard({
+    required this.specialization,
+    this.name = '',
+    this.qualification = '',
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +103,11 @@ class _ReviewerCard extends StatelessWidget {
 
               if (name.isNotEmpty) ...[
                 const SizedBox(height: 10),
-                Text(name, textAlign: TextAlign.center, style: Theme.of(context).textTheme.titleMedium),
+                Text(
+                  name,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
                 const SizedBox(height: 6),
                 Text(qualification, textAlign: TextAlign.center),
               ],

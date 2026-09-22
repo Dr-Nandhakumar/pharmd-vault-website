@@ -48,8 +48,9 @@ class AdvisoryBoard extends StatelessWidget {
                 expertise: "Pharmaceutics",
               ),
               _AdvisorCard(
-                name: "Advisor Position",
+                name: "Mr. Dharmasastha.S",
                 expertise: "Pharmaceutical Analysis",
+                qualification: "M.Pharm, RPh",
               ),
               _AdvisorCard(
                 name: "Advisor Position",
@@ -70,8 +71,13 @@ class AdvisoryBoard extends StatelessWidget {
 class _AdvisorCard extends StatelessWidget {
   final String name;
   final String expertise;
+  final String qualification;
 
-  const _AdvisorCard({required this.name, required this.expertise});
+  const _AdvisorCard({
+    required this.name,
+    required this.expertise,
+    this.qualification = '',
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -103,6 +109,15 @@ class _AdvisorCard extends StatelessWidget {
                   context,
                 ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
               ),
+
+              if (qualification.isNotEmpty) ...[
+                const SizedBox(height: 6),
+                Text(
+                  qualification,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
 
               const SizedBox(height: 10),
 
