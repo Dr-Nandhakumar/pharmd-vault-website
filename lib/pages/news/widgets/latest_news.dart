@@ -34,7 +34,20 @@ class _LatestNewsState extends State<LatestNews> {
       builder: (dialogContext) => AlertDialog(
         title: Text(news.title),
         content: SingleChildScrollView(
-          child: Text(news.description, style: const TextStyle(height: 1.6)),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (news.imagePath != null) ...[
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: Image.asset(news.imagePath!, fit: BoxFit.cover),
+                ),
+                const SizedBox(height: 20),
+              ],
+              Text(news.description, style: const TextStyle(height: 1.6)),
+            ],
+          ),
         ),
         actions: [
           TextButton.icon(
@@ -68,6 +81,16 @@ class _LatestNewsState extends State<LatestNews> {
   }
 
   static const _news = [
+    _NewsItem(
+      slug: 'world-pharmacists-day-2026',
+      title: 'World Pharmacists Day 2026',
+      category: 'World Pharmacists Day',
+      date: '25 September 2026',
+      description:
+          'Pharm.D Vault Organization extends warm wishes to pharmacists everywhere on World Pharmacists Day. Under the 2026 theme, “Empowering pharmacists for healthier futures,” we honour pharmacists who protect patients, advance the responsible use of medicines, strengthen healthcare systems, and build healthier communities.',
+      icon: Icons.local_pharmacy_outlined,
+      imagePath: 'assets/news/world_pharmacists_day_2026.png',
+    ),
     _NewsItem(
       slug: 'pharmd-government-colleges',
       title: 'Pharm.D Education at Government Colleges',
@@ -150,6 +173,7 @@ class _NewsItem {
   final String date;
   final String description;
   final IconData icon;
+  final String? imagePath;
 
   const _NewsItem({
     required this.slug,
@@ -158,6 +182,7 @@ class _NewsItem {
     required this.date,
     required this.description,
     required this.icon,
+    this.imagePath,
   });
 
   String get link => 'https://pharmdvault.org/?article=$slug#/news';
@@ -184,7 +209,20 @@ class _NewsCard extends StatelessWidget {
       builder: (dialogContext) => AlertDialog(
         title: Text(news.title),
         content: SingleChildScrollView(
-          child: Text(news.description, style: const TextStyle(height: 1.6)),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (news.imagePath != null) ...[
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: Image.asset(news.imagePath!, fit: BoxFit.cover),
+                ),
+                const SizedBox(height: 20),
+              ],
+              Text(news.description, style: const TextStyle(height: 1.6)),
+            ],
+          ),
         ),
         actions: [
           TextButton.icon(
@@ -212,12 +250,21 @@ class _NewsCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 170,
-              color: const Color(0xffEAF2FF),
-              child: Center(
-                child: Icon(news.icon, size: 70, color: AppColors.primary),
-              ),
+            SizedBox(
+              height: 210,
+              width: double.infinity,
+              child: news.imagePath == null
+                  ? ColoredBox(
+                      color: const Color(0xffEAF2FF),
+                      child: Center(
+                        child: Icon(
+                          news.icon,
+                          size: 70,
+                          color: AppColors.primary,
+                        ),
+                      ),
+                    )
+                  : Image.asset(news.imagePath!, fit: BoxFit.cover),
             ),
             Padding(
               padding: const EdgeInsets.all(22),
@@ -305,4 +352,3 @@ class _NewsCard extends StatelessWidget {
     );
   }
 }
-

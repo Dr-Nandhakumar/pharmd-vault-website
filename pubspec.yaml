@@ -23,6 +23,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/logo/
+    - assets/news/
     - assets/documents/guidelines/
     - assets/documents/templates/
     - assets/documents/publications/review-drafts/
