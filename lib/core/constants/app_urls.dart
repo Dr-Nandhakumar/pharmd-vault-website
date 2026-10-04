@@ -5,6 +5,7 @@ class AppUrls {
   AppUrls._();
 
   static const String website = 'https://pharmdvault.org';
+  static const String anatomyAtlas = 'https://pharmdvault.org/atlas/';
   static const String email = 'pharmdvault2025@gmail.com';
   static const String phone = '+91 9361542119';
   static const String whatsapp = '+91 9500465017';

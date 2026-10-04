@@ -28,6 +28,20 @@ jobs:
         run: flutter pub get
       - name: Build website with bundled documents
         run: flutter build web --release --base-href /
+      - name: Set up Node for the anatomy atlas
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+          cache: npm
+          cache-dependency-path: atlas/package-lock.json
+      - name: Build interactive anatomy atlas
+        working-directory: atlas
+        run: |
+          npm ci
+          npm run check
+          npm run build
+      - name: Add atlas to website output
+        run: cp -R atlas/dist build/web/atlas
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website

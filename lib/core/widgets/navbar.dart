@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/app_assets.dart';
 import '../constants/app_colors.dart';
 import '../constants/app_strings.dart';
+import '../utils/app_actions.dart';
 import '../utils/responsive.dart';
 
 class Navbar extends StatelessWidget implements PreferredSizeWidget {
@@ -106,6 +107,7 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
       _navItem(context, AppStrings.news, 5),
       _navItem(context, AppStrings.gallery, 6),
       _navItem(context, AppStrings.contact, 7),
+      _navItem(context, '3D Atlas', 8),
 
       const SizedBox(width: 24),
     ];
@@ -153,6 +155,10 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
 
           case 7:
             Navigator.pushNamed(context, '/contact');
+            break;
+
+          case 8:
+            AppActions.openAnatomyAtlas(context);
             break;
         }
       },
@@ -247,6 +253,23 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
                     Icons.mail_outline,
                     AppStrings.contact,
                     currentIndex == 7,
+                  ),
+                  ListTile(
+                    leading: const Icon(
+                      Icons.view_in_ar_outlined,
+                      color: AppColors.textSecondary,
+                    ),
+                    title: const Text(
+                      'Interactive 3D Anatomy Atlas',
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    onTap: () {
+                      Navigator.pop(context);
+                      AppActions.openAnatomyAtlas(context);
+                    },
                   ),
                 ],
               ),

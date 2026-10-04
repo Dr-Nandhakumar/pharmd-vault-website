@@ -54,6 +54,10 @@ class AppActions {
     await openUrl(context, AppUrls.whatsappUrl);
   }
 
+  static Future<void> openAnatomyAtlas(BuildContext context) async {
+    await openUrl(context, AppUrls.anatomyAtlas);
+  }
+
   /// Opens a file bundled with the deployed Flutter website.
   static Future<void> openWebsiteAsset(
     BuildContext context,

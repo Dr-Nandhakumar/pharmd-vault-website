@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 import '../constants/app_strings.dart';
 import '../constants/app_urls.dart';
+import '../utils/app_actions.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -43,6 +44,7 @@ class Footer extends StatelessWidget {
               _footerLink(context, "Home", '/'),
               _footerLink(context, "About", '/about'),
               _footerLink(context, "Publications", '/publications'),
+              _externalFooterLink(context, "3D Anatomy Atlas"),
               _footerLink(context, "Guidelines", '/guidelines'),
               _footerLink(context, "Team", '/team'),
               _footerLink(context, "Contact", '/contact'),
@@ -87,6 +89,22 @@ class Footer extends StatelessWidget {
   Widget _footerLink(BuildContext context, String title, String route) {
     return InkWell(
       onTap: () => Navigator.pushNamed(context, route),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+        child: Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _externalFooterLink(BuildContext context, String title) {
+    return InkWell(
+      onTap: () => AppActions.openAnatomyAtlas(context),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
         child: Text(
