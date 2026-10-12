@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/utils/app_actions.dart';
 
 class HapCourseCard extends StatelessWidget {
   const HapCourseCard({super.key});
@@ -24,8 +25,8 @@ class HapCourseCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Chip(
-                  avatar: Icon(Icons.schedule, size: 18),
-                  label: Text('Enrolment coming soon'),
+                  avatar: Icon(Icons.menu_book, size: 18),
+                  label: Text('Free access · Open now'),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -51,9 +52,17 @@ class HapCourseCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 const Text(
-                  'The learning portal is being prepared. Registration and '
-                  'payments are not open yet.',
+                  'Explore the course freely. No login or payment required.',
                   style: TextStyle(fontWeight: FontWeight.w600, height: 1.5),
+                ),
+                const SizedBox(height: 12),
+                FilledButton.icon(
+                  onPressed: () => AppActions.openUrl(
+                    context,
+                    'https://pharmdvault.org/hap/',
+                  ),
+                  icon: const Icon(Icons.open_in_new),
+                  label: const Text('Open the learning course'),
                 ),
                 const SizedBox(height: 12),
                 const Text(

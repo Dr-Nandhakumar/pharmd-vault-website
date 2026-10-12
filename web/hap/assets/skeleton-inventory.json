@@ -1,0 +1,554 @@
+[
+  {
+    "name": "anterior chamber of left eyeball",
+    "source_id": "FJ1282"
+  },
+  {
+    "name": "left choroid",
+    "source_id": "FJ1285"
+  },
+  {
+    "name": "left choroid",
+    "source_id": "FJ1286"
+  },
+  {
+    "name": "left cornea",
+    "source_id": "FJ1289"
+  },
+  {
+    "name": "left iris",
+    "source_id": "FJ1297"
+  },
+  {
+    "name": "left lacrimal gland",
+    "source_id": "FJ1299"
+  },
+  {
+    "name": "left lens",
+    "source_id": "FJ1305"
+  },
+  {
+    "name": "left sclera",
+    "source_id": "FJ1317"
+  },
+  {
+    "name": "suspensory ligament of left lens",
+    "source_id": "FJ1320"
+  },
+  {
+    "name": "left vitreous body",
+    "source_id": "FJ1331"
+  },
+  {
+    "name": "right choroid",
+    "source_id": "FJ1336"
+  },
+  {
+    "name": "right choroid",
+    "source_id": "FJ1337"
+  },
+  {
+    "name": "right cornea",
+    "source_id": "FJ1340"
+  },
+  {
+    "name": "right iris",
+    "source_id": "FJ1348"
+  },
+  {
+    "name": "right lacrimal gland",
+    "source_id": "FJ1350"
+  },
+  {
+    "name": "right lens",
+    "source_id": "FJ1356"
+  },
+  {
+    "name": "right sclera",
+    "source_id": "FJ1368"
+  },
+  {
+    "name": "suspensory ligament of right lens",
+    "source_id": "FJ1371"
+  },
+  {
+    "name": "right vitreous body",
+    "source_id": "FJ1382"
+  },
+  {
+    "name": "hyoid bone",
+    "source_id": "FJ2772"
+  },
+  {
+    "name": "right hip",
+    "source_id": "FJ3152"
+  },
+  {
+    "name": "xiphoid process",
+    "source_id": "FJ3153"
+  },
+  {
+    "name": "tenth thoracic vertebra",
+    "source_id": "FJ3154"
+  },
+  {
+    "name": "eleventh thoracic vertebra",
+    "source_id": "FJ3155"
+  },
+  {
+    "name": "twelfth thoracic vertebra",
+    "source_id": "FJ3156"
+  },
+  {
+    "name": "first lumbar vertebra",
+    "source_id": "FJ3157"
+  },
+  {
+    "name": "first thoracic vertebra",
+    "source_id": "FJ3158"
+  },
+  {
+    "name": "second lumbar vertebra",
+    "source_id": "FJ3159"
+  },
+  {
+    "name": "second thoracic vertebra",
+    "source_id": "FJ3160"
+  },
+  {
+    "name": "third cervical vertebra",
+    "source_id": "FJ3161"
+  },
+  {
+    "name": "third lumbar vertebra",
+    "source_id": "FJ3162"
+  },
+  {
+    "name": "third thoracic vertebra",
+    "source_id": "FJ3163"
+  },
+  {
+    "name": "fourth cervical vertebra",
+    "source_id": "FJ3164"
+  },
+  {
+    "name": "fourth lumbar vertebra",
+    "source_id": "FJ3165"
+  },
+  {
+    "name": "fourth thoracic vertebra",
+    "source_id": "FJ3166"
+  },
+  {
+    "name": "fifth cervical vertebra",
+    "source_id": "FJ3167"
+  },
+  {
+    "name": "fifth lumbar vertebra",
+    "source_id": "FJ3168"
+  },
+  {
+    "name": "fifth thoracic vertebra",
+    "source_id": "FJ3169"
+  },
+  {
+    "name": "sixth cervical vertebra",
+    "source_id": "FJ3170"
+  },
+  {
+    "name": "sixth thoracic vertebra",
+    "source_id": "FJ3171"
+  },
+  {
+    "name": "seventh cervical vertebra",
+    "source_id": "FJ3172"
+  },
+  {
+    "name": "seventh thoracic vertebra",
+    "source_id": "FJ3173"
+  },
+  {
+    "name": "eighth thoracic vertebra",
+    "source_id": "FJ3174"
+  },
+  {
+    "name": "ninth thoracic vertebra",
+    "source_id": "FJ3175"
+  },
+  {
+    "name": "atlas",
+    "source_id": "FJ3176"
+  },
+  {
+    "name": "axis",
+    "source_id": "FJ3177"
+  },
+  {
+    "name": "body of sternum",
+    "source_id": "FJ3178"
+  },
+  {
+    "name": "ethmoid",
+    "source_id": "FJ3199"
+  },
+  {
+    "name": "frontal bone",
+    "source_id": "FJ3200"
+  },
+  {
+    "name": "hyoid bone",
+    "source_id": "FJ3201"
+  },
+  {
+    "name": "intervertebral disk of axis",
+    "source_id": "FJ3202"
+  },
+  {
+    "name": "fourth thoracic intervertebral symphysis",
+    "source_id": "FJ3203"
+  },
+  {
+    "name": "fifth thoracic intervertebral symphysis",
+    "source_id": "FJ3204"
+  },
+  {
+    "name": "sixth thoracic intervertebral symphysis",
+    "source_id": "FJ3205"
+  },
+  {
+    "name": "seventh thoracic intervertebral symphysis",
+    "source_id": "FJ3206"
+  },
+  {
+    "name": "eighth thoracic intervertebral symphysis",
+    "source_id": "FJ3207"
+  },
+  {
+    "name": "ninth thoracic intervertebral symphysis",
+    "source_id": "FJ3208"
+  },
+  {
+    "name": "tenth thoracic intervertebral symphysis",
+    "source_id": "FJ3209"
+  },
+  {
+    "name": "eleventh thoracic intervertebral symphysis",
+    "source_id": "FJ3210"
+  },
+  {
+    "name": "intervertebral disk",
+    "source_id": "FJ3211"
+  },
+  {
+    "name": "first lumbar intervertebral symphysis",
+    "source_id": "FJ3212"
+  },
+  {
+    "name": "third cervical intervertebral symphysis",
+    "source_id": "FJ3213"
+  },
+  {
+    "name": "second lumbar intervertebral symphysis",
+    "source_id": "FJ3214"
+  },
+  {
+    "name": "third lumbar intervertebral symphysis",
+    "source_id": "FJ3215"
+  },
+  {
+    "name": "fourth lumbar intervertebral symphysis",
+    "source_id": "FJ3216"
+  },
+  {
+    "name": "fifth lumbar intervertebral symphysis",
+    "source_id": "FJ3217"
+  },
+  {
+    "name": "fourth cervical intervertebral symphysis",
+    "source_id": "FJ3218"
+  },
+  {
+    "name": "fifth cervical intervertebral symphysis",
+    "source_id": "FJ3219"
+  },
+  {
+    "name": "sixth cervical intervertebral symphysis",
+    "source_id": "FJ3220"
+  },
+  {
+    "name": "seventh cervical intervertebral symphysis",
+    "source_id": "FJ3221"
+  },
+  {
+    "name": "first thoracic intervertebral symphysis",
+    "source_id": "FJ3222"
+  },
+  {
+    "name": "second thoracic intervertebral symphysis",
+    "source_id": "FJ3223"
+  },
+  {
+    "name": "third thoracic intervertebral symphysis",
+    "source_id": "FJ3224"
+  },
+  {
+    "name": "left tenth rib",
+    "source_id": "FJ3225"
+  },
+  {
+    "name": "left eleventh rib",
+    "source_id": "FJ3226"
+  },
+  {
+    "name": "left twelfth rib",
+    "source_id": "FJ3227"
+  },
+  {
+    "name": "left first rib",
+    "source_id": "FJ3228"
+  },
+  {
+    "name": "left second rib",
+    "source_id": "FJ3229"
+  },
+  {
+    "name": "left third rib",
+    "source_id": "FJ3230"
+  },
+  {
+    "name": "left fourth rib",
+    "source_id": "FJ3231"
+  },
+  {
+    "name": "left fifth rib",
+    "source_id": "FJ3232"
+  },
+  {
+    "name": "left sixth rib",
+    "source_id": "FJ3233"
+  },
+  {
+    "name": "left seventh rib",
+    "source_id": "FJ3234"
+  },
+  {
+    "name": "left eighth rib",
+    "source_id": "FJ3235"
+  },
+  {
+    "name": "left ninth rib",
+    "source_id": "FJ3236"
+  },
+  {
+    "name": "left clavicle",
+    "source_id": "FJ3237"
+  },
+  {
+    "name": "left first costal cartilage",
+    "source_id": "FJ3239"
+  },
+  {
+    "name": "left second costal cartilage",
+    "source_id": "FJ3242"
+  },
+  {
+    "name": "left third costal cartilage",
+    "source_id": "FJ3245"
+  },
+  {
+    "name": "left fourth costal cartilage",
+    "source_id": "FJ3248"
+  },
+  {
+    "name": "left fifth costal cartilage",
+    "source_id": "FJ3251"
+  },
+  {
+    "name": "left sixth costal cartilage",
+    "source_id": "FJ3254"
+  },
+  {
+    "name": "left seventh costal cartilage",
+    "source_id": "FJ3255"
+  },
+  {
+    "name": "left inferior nasal concha",
+    "source_id": "FJ3263"
+  },
+  {
+    "name": "left lacrimal bone",
+    "source_id": "FJ3265"
+  },
+  {
+    "name": "left maxilla",
+    "source_id": "FJ3269"
+  },
+  {
+    "name": "left nasal bone",
+    "source_id": "FJ3272"
+  },
+  {
+    "name": "left palatine bone",
+    "source_id": "FJ3273"
+  },
+  {
+    "name": "left parietal bone",
+    "source_id": "FJ3274"
+  },
+  {
+    "name": "left scapula",
+    "source_id": "FJ3279"
+  },
+  {
+    "name": "left temporal bone",
+    "source_id": "FJ3281"
+  },
+  {
+    "name": "left cheek",
+    "source_id": "FJ3287"
+  },
+  {
+    "name": "left hip",
+    "source_id": "FJ3288"
+  },
+  {
+    "name": "mandible",
+    "source_id": "FJ3289"
+  },
+  {
+    "name": "manubrium",
+    "source_id": "FJ3290"
+  },
+  {
+    "name": "occipital bone",
+    "source_id": "FJ3309"
+  },
+  {
+    "name": "right tenth rib",
+    "source_id": "FJ3330"
+  },
+  {
+    "name": "right eleventh rib",
+    "source_id": "FJ3331"
+  },
+  {
+    "name": "right twelfth rib",
+    "source_id": "FJ3332"
+  },
+  {
+    "name": "right first costal cartilage",
+    "source_id": "FJ3333"
+  },
+  {
+    "name": "right first rib",
+    "source_id": "FJ3334"
+  },
+  {
+    "name": "right second costal cartilage",
+    "source_id": "FJ3335"
+  },
+  {
+    "name": "right second rib",
+    "source_id": "FJ3336"
+  },
+  {
+    "name": "right third costal cartilage",
+    "source_id": "FJ3337"
+  },
+  {
+    "name": "right third rib",
+    "source_id": "FJ3338"
+  },
+  {
+    "name": "right fourth costal cartilage",
+    "source_id": "FJ3339"
+  },
+  {
+    "name": "right fourth rib",
+    "source_id": "FJ3340"
+  },
+  {
+    "name": "right fifth costal cartilage",
+    "source_id": "FJ3341"
+  },
+  {
+    "name": "right fifth rib",
+    "source_id": "FJ3342"
+  },
+  {
+    "name": "right sixth costal cartilage",
+    "source_id": "FJ3343"
+  },
+  {
+    "name": "right sixth rib",
+    "source_id": "FJ3344"
+  },
+  {
+    "name": "right seventh costal cartilage",
+    "source_id": "FJ3345"
+  },
+  {
+    "name": "right seventh rib",
+    "source_id": "FJ3346"
+  },
+  {
+    "name": "right eighth rib",
+    "source_id": "FJ3347"
+  },
+  {
+    "name": "right ninth rib",
+    "source_id": "FJ3348"
+  },
+  {
+    "name": "right clavicle",
+    "source_id": "FJ3362"
+  },
+  {
+    "name": "right inferior nasal concha",
+    "source_id": "FJ3369"
+  },
+  {
+    "name": "right lacrimal bone",
+    "source_id": "FJ3371"
+  },
+  {
+    "name": "right maxilla",
+    "source_id": "FJ3375"
+  },
+  {
+    "name": "right nasal bone",
+    "source_id": "FJ3378"
+  },
+  {
+    "name": "right palatine bone",
+    "source_id": "FJ3379"
+  },
+  {
+    "name": "right parietal bone",
+    "source_id": "FJ3380"
+  },
+  {
+    "name": "right scapula",
+    "source_id": "FJ3384"
+  },
+  {
+    "name": "right temporal bone",
+    "source_id": "FJ3386"
+  },
+  {
+    "name": "right cheek",
+    "source_id": "FJ3392"
+  },
+  {
+    "name": "sacrum",
+    "source_id": "FJ3393"
+  },
+  {
+    "name": "sphenoid bone",
+    "source_id": "FJ3394"
+  },
+  {
+    "name": "vomer",
+    "source_id": "FJ3395"
+  }
+]

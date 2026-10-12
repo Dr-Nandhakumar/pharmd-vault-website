@@ -1,0 +1,5 @@
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.
+Source: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html
+License: https://creativecommons.org/licenses/by/4.0/
+Official licence: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+Changes: selected heart components and proximal great vessels, normalized coordinates, illustrative materials, converted to GLB and Blender. Static anatomical model; no physiological animation or medical validation added.

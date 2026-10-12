@@ -1,0 +1,4 @@
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.
+Source: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html
+Licence: https://creativecommons.org/licenses/by/4.0/
+Changes: selected skeletal system and right femur; normalized and reoriented geometry; added illustrative bone material; exported as GLB. These are normal anatomical meshes, not patient-specific scans or osteoporosis simulations.
