@@ -14,6 +14,7 @@ import 'widgets/certificates_section.dart';
 import 'widgets/faq_section.dart';
 import 'widgets/submit_article_cta.dart';
 import 'widgets/anatomy_atlas_card.dart';
+import 'widgets/hap_course_card.dart';
 
 class PublicationsPage extends StatelessWidget {
   const PublicationsPage({super.key});
@@ -33,6 +34,7 @@ class PublicationsPage extends StatelessWidget {
 
             // Featured Publications
             FeaturedPublications(),
+            HapCourseCard(),
 
             // Interactive educational tool
             AnatomyAtlasCard(),
