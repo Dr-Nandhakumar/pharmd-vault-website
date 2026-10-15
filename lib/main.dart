@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'core/theme/app_theme.dart';
 import 'routes/app_routes.dart';
+import 'core/widgets/vault_assistant.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,6 +24,7 @@ class PharmDVaultWebsite extends StatelessWidget {
       initialRoute: AppRoutes.home,
 
       routes: AppRoutes.routes,
+      builder: (context, child) => VaultAssistant(child: child!),
     );
   }
 }

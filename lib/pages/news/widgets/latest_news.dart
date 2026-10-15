@@ -82,6 +82,42 @@ class _LatestNewsState extends State<LatestNews> {
 
   static const _news = [
     _NewsItem(
+      slug: 'national-formulary-india-2026-update',
+      title: 'PCI Highlights National Formulary of India 2026',
+      category: 'Pharmacy Update',
+      date: '14 October 2026',
+      description:
+          'The Pharmacy Council of India has published a circular concerning the 2026 edition of the National Formulary of India. Pharmacy educators, students and practitioners can check the latest edition and the council\'s notice when updating their reference resources.',
+      icon: Icons.menu_book_outlined,
+    ),
+    _NewsItem(
+      slug: 'mpharm-medical-device-syllabus-october-2026',
+      title: 'M.Pharm Medical Device Syllabus Implementation Update',
+      category: 'Pharmacy Education',
+      date: '13 October 2026',
+      description:
+          'PCI has issued a circular on implementation of the M.Pharm Medical Device syllabus published in the Gazette of India. Institutions and prospective learners should review the notified curriculum and applicable institutional requirements. This update is not an admission announcement.',
+      icon: Icons.school_outlined,
+    ),
+    _NewsItem(
+      slug: 'free-human-anatomy-learning-course-launch',
+      title: 'Free Anatomy, Physiology and Pathophysiology Course Now Open',
+      category: 'Pharm.D Vault Announcement',
+      date: '12 October 2026',
+      description:
+          'Pharm.D Vault has opened its visual learning course for BP104T, Semester I of the B.Pharm 2026 syllabus as per NEP 2020. Explore 102 topics, quizzes, shared 3D teaching models and selected physiology labs from the Publications page. Access is free, with no login or payment required. Models are simplified educational tools, not patient-specific clinical simulations.',
+      icon: Icons.view_in_ar_outlined,
+    ),
+    _NewsItem(
+      slug: '75th-indian-pharmaceutical-congress-2026',
+      title: '75th Indian Pharmaceutical Congress Scheduled for December',
+      category: 'Upcoming Pharmacy Event',
+      date: '6 October 2026',
+      description:
+          'PCI has circulated a notice on faculty and student participation in the platinum jubilee edition of the Indian Pharmaceutical Congress. The event is scheduled for 18–20 December 2026 at Yashobhoomi, New Delhi. Check the organisers\' current registration and programme details before making arrangements. Pharm.D Vault is sharing this as an education-sector update, not as the event organiser.',
+      icon: Icons.event_outlined,
+    ),
+    _NewsItem(
       slug: 'world-pharmacists-day-2026',
       title: 'World Pharmacists Day 2026',
       category: 'World Pharmacists Day',
