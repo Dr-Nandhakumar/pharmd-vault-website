@@ -1,0 +1,10 @@
+.print-root{display:none}
+@media print{
+ @page{size:13.333333in 7.5in;margin:0}
+ html,body{margin:0!important;padding:0!important;background:white!important}
+ body>*:not(.print-root){display:none!important}
+ .print-root{display:block!important}
+ .print-sheet{width:1280px;height:720px;position:relative;overflow:hidden;break-after:page;page-break-after:always;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .print-sheet:last-child{break-after:auto;page-break-after:auto}
+ .print-sheet .element{cursor:default!important}
+}
