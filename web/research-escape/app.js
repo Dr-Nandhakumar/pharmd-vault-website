@@ -2,13 +2,24 @@ import {cases,roomPoints} from './data.js';
 let activeCase=cases.find(c=>c.id===new URLSearchParams(location.search).get('case'))||cases[0],rooms=activeCase.rooms;
 const $=id=>document.getElementById(id);let index=0,total=0,wrong=0,hinted=false,solved=false,selected=null,started=0,timed=true,ticker,results=[];
 const picker=document.createElement('div');picker.className='case-picker';
-const pickerLabel=document.createElement('label');pickerLabel.htmlFor='case-choice';pickerLabel.textContent='Choose your investigation · 4 cases / 20 challenges';
+const pickerLabel=document.createElement('label');pickerLabel.htmlFor='case-choice';pickerLabel.textContent=`Choose your investigation · ${cases.length} cases / ${cases.reduce((sum,c)=>sum+c.rooms.length,0)} challenges`;
 const caseChoice=document.createElement('select');caseChoice.id='case-choice';
 for(const c of cases){const option=document.createElement('option');option.value=c.id;option.textContent=c.title;caseChoice.append(option);}
 caseChoice.value=activeCase.id;const caseSummary=document.createElement('p');
 picker.append(pickerLabel,caseChoice,caseSummary);$('intro').insertBefore(picker,$('intro').querySelector('.mode'));
 function updateCase(){activeCase=cases.find(c=>c.id===caseChoice.value)||cases[0];rooms=activeCase.rooms;caseSummary.textContent=activeCase.summary;document.querySelector('#intro h1').textContent=activeCase.title;document.title=activeCase.title+' | Pharm.D Vault';const url=new URL(location.href);url.searchParams.set('case',activeCase.id);history.replaceState(null,'',url);}
-const refreshCase=()=>{updateCase();document.querySelector('#intro .eyebrow').textContent=`CASE FILE ${String(cases.indexOf(activeCase)+1).padStart(3,'0')} · INTERACTIVE LEARNING`;document.querySelector('#finish .eyebrow').textContent=`CASE CLOSED · ${activeCase.title}`;};
+const originalBrief=document.querySelector('#intro .brief').textContent;
+const background=document.createElement('details'),backgroundTitle=document.createElement('summary'),backgroundText=document.createElement('p');
+backgroundTitle.textContent='Patient context · simulated';background.append(backgroundTitle,backgroundText);document.querySelector('#game aside').prepend(background);
+const sources=document.createElement('details'),sourceTitle=document.createElement('summary'),sourceLinks=document.createElement('div');
+sourceTitle.textContent='Learning sources & scope';sources.append(sourceTitle,sourceLinks);document.querySelector('main').append(sources);
+document.querySelector('#intro .notice').textContent='All patients, timelines, records and results are fictional. Some medicine names are real; no dosing or treatment recommendation is provided. Educational simulation only—not clinical advice, a qualification, or an accredited assessment. Do not enter or submit these scenarios as real patient reports.';
+const refreshCase=()=>{updateCase();document.querySelector('#intro .eyebrow').textContent=`CASE FILE ${String(cases.indexOf(activeCase)+1).padStart(3,'0')} · INTERACTIVE LEARNING`;document.querySelector('#finish .eyebrow').textContent=`CASE CLOSED · ${activeCase.title}`;
+ document.querySelector('#intro .brief').textContent=activeCase.brief||originalBrief;background.hidden=!activeCase.brief;backgroundText.textContent=activeCase.brief||'';
+ sourceLinks.replaceChildren();sources.hidden=!activeCase.references?.length;sources.open=false;
+ for(const [label,url] of activeCase.references||[]){const p=document.createElement('p'),a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener noreferrer';p.append(a);sourceLinks.append(p);}
+ const note=document.createElement('p');note.textContent='Sources inform the learning principles, not the fictional patient details. References checked 28 October 2026. Use current local guidance and qualified clinical review for real care; reporting requirements vary by jurisdiction. These cases have not undergone independent clinical validation.';sourceLinks.append(note);
+};
 caseChoice.onchange=refreshCase;refreshCase();
 function show(id){for(const section of ['intro','game','finish'])$(section).hidden=section!==id;}
 function clock(){const seconds=Math.floor((Date.now()-started)/1000),left=Math.max(0,900-seconds);$('clock').textContent=timed?(left?`${Math.floor(left/60)}:${String(left%60).padStart(2,'0')} remaining`:'Clock ended · continue in learning mode'):`${Math.floor(seconds/60)}:${String(seconds%60).padStart(2,'0')} elapsed`;}
