@@ -17,6 +17,7 @@ import 'widgets/anatomy_atlas_card.dart';
 import 'widgets/hap_course_card.dart';
 import 'widgets/slides_studio_card.dart';
 import 'widgets/research_escape_card.dart';
+import 'widgets/animation_studio_card.dart';
 
 class PublicationsPage extends StatelessWidget {
   const PublicationsPage({super.key});
@@ -42,6 +43,7 @@ class PublicationsPage extends StatelessWidget {
             AnatomyAtlasCard(),
             SlidesStudioCard(),
             ResearchEscapeCard(),
+            AnimationStudioCard(),
 
             // Categories
             PublicationCategories(),
