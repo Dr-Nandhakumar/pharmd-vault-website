@@ -82,6 +82,16 @@ class _LatestNewsState extends State<LatestNews> {
 
   static const _news = [
     _NewsItem(
+      slug: 'happy-diwali-2026',
+      title: 'Happy Diwali from Pharm.D Vault Organization',
+      category: 'Celebration',
+      date: '8 November 2026',
+      description:
+          'May the light of knowledge bring health, hope and happiness to every home. Pharm.D Vault Organization wishes our students, educators, researchers, healthcare professionals and their families a joyful Diwali. Together, let us continue to Educate, Research, Innovate and Serve.',
+      icon: Icons.celebration_outlined,
+      imagePath: 'assets/news/happy_diwali_2026.png',
+    ),
+    _NewsItem(
       slug: 'national-formulary-india-2026-update',
       title: 'PCI Highlights National Formulary of India 2026',
       category: 'Pharmacy Update',
